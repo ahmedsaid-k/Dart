@@ -19,11 +19,7 @@ void myApp() {
     if (operation == 5) {
       print('Thank you for using the calculator.');
       break;
-    } else if (operation != 1 &&
-        operation != 2 &&
-        operation != 3 &&
-        operation != 4 &&
-        operation != 5) {
+    } else if (operation != 1 && operation != 2 && operation != 3 && operation != 4 && operation != 5) {
       print('⚠️Erorr, try agan. ⚠️');
       continue;
     }
