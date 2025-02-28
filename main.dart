@@ -15,7 +15,7 @@ void myApp() {
     print('4-operation (/).');
     print('5-Exit.');
 
-    int operation = int.parse(stdin.readLineSync()!);
+    int? operation = int.tryParse(stdin.readLineSync()?? '');
     if (operation == 5) {
       print('Thank you for using the calculator.');
       break;
@@ -26,51 +26,66 @@ void myApp() {
 
     switch (operation) {
       case 1:
+        try{
         print("Enter the first number: ");
-        double first_number = double.parse(stdin.readLineSync()!);
+        double? first_number = double.tryParse(stdin.readLineSync() ?? '');
         print("Enter the second number: ");
-        double second_number = double.parse(stdin.readLineSync()!);
-        double result = first_number + second_number;
+        double? second_number = double.tryParse(stdin.readLineSync() ?? '');
+        double result          = first_number! + second_number!;
         print("➡️Result: $first_number + $second_number = $result");
         numberofoperations++;
         print("عدد العمليات التي تمت : $numberofoperations");
         break;
-
+        }catch(e){
+          print(e);
+        }
       case 2:
-        print("Enter the first number: ");
-        double first_number = double.parse(stdin.readLineSync()!);
-        print("Enter the second number: ");
-        double second_number = double.parse(stdin.readLineSync()!);
-        double result = first_number - second_number;
-        print("➡️Result: $first_number - $second_number = $result");
-        numberofoperations++;
-        print("عدد العمليات التي تمت : $numberofoperations");
-        break;
+        try{
+          print("Enter the first number: ");
+          double? first_number = double.tryParse(stdin.readLineSync() ?? '');
+          print("Enter the second number: ");
+          double? second_number = double.tryParse(stdin.readLineSync() ?? '');
+          double result          = first_number! - second_number!;
+          print("➡️Result: $first_number - $second_number = $result");
+          numberofoperations++;
+          print("عدد العمليات التي تمت : $numberofoperations");
+          break;
+          }catch(e){
+            print(e);
+          }
       case 3:
-        print("Enter the first number: ");
-        double first_number = double.parse(stdin.readLineSync()!);
-        print("Enter the second number: ");
-        double second_number = double.parse(stdin.readLineSync()!);
-        double result = first_number * second_number;
-        print("Result: $first_number * $second_number = $result");
-        numberofoperations++;
-        print("عدد العمليات التي تمت : $numberofoperations");
-        break;
+        try{
+          print("Enter the first number: ");
+          double? first_number = double.tryParse(stdin.readLineSync() ?? '');
+          print("Enter the second number: ");
+          double? second_number = double.tryParse(stdin.readLineSync() ?? '');
+          double result          = first_number! * second_number!;
+          print("➡️Result: $first_number * $second_number = $result");
+          numberofoperations++;
+          print("عدد العمليات التي تمت : $numberofoperations");
+          break;
+          }catch(e){
+            print(e);
+          }
       case 4:
+        try{
         print("Enter the first number: ");
-        double first_number = double.parse(stdin.readLineSync()!);
+        double? first_number = double.tryParse(stdin.readLineSync() ?? '');
         print("Enter the second number: ");
-        double second_number = double.parse(stdin.readLineSync()!);
+        double? second_number = double.tryParse(stdin.readLineSync() ?? '');
         if (second_number == 0) {
           print("⚠️غير مسموح بالقسمه علي رقم صفر!⚠️ ");
         } else {
-          double result = first_number / second_number;
+          double result = first_number! / second_number!;
           print("➡️Result: $first_number / $second_number = $result");
           numberofoperations++;
           print("عدد العمليات التي تمت : $numberofoperations");
         }
 
         break;
+        }catch(e){
+            print(e);
+        }
       default:
         print("⚠️Erorr.⚠️");
     }
