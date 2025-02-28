@@ -31,7 +31,7 @@ void myApp() {
         double? first_number = double.tryParse(stdin.readLineSync() ?? '');
         print("Enter the second number: ");
         double? second_number = double.tryParse(stdin.readLineSync() ?? '');
-        double result          = first_number! + second_number!;
+        double result = first_number! + second_number!;
         print("➡️Result: $first_number + $second_number = $result");
         numberofoperations++;
         print("عدد العمليات التي تمت : $numberofoperations");
@@ -45,7 +45,7 @@ void myApp() {
           double? first_number = double.tryParse(stdin.readLineSync() ?? '');
           print("Enter the second number: ");
           double? second_number = double.tryParse(stdin.readLineSync() ?? '');
-          double result          = first_number! - second_number!;
+          double result = first_number! - second_number!;
           print("➡️Result: $first_number - $second_number = $result");
           numberofoperations++;
           print("عدد العمليات التي تمت : $numberofoperations");
@@ -59,7 +59,7 @@ void myApp() {
           double? first_number = double.tryParse(stdin.readLineSync() ?? '');
           print("Enter the second number: ");
           double? second_number = double.tryParse(stdin.readLineSync() ?? '');
-          double result          = first_number! * second_number!;
+          double result = first_number! * second_number!;
           print("➡️Result: $first_number * $second_number = $result");
           numberofoperations++;
           print("عدد العمليات التي تمت : $numberofoperations");
