@@ -7,6 +7,9 @@ void main() {
 void myApp() {
   print('Welcome to calculator');
   int numberofoperations = 0; //***عشان احسب عدد العمليات اللي تمت***
+
+
+  
   while (true) {
     print('choice number: ');
     print('1-operation (+).');
