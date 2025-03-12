@@ -1,9 +1,32 @@
 import "dart:io";
 
 void main() {
-  myApp();
+  
+  while(true){
+    try{
+    print("Choice number project to Run : ");
+    print("1- Run one project calculator.");
+    print("2-Exit.");   
+    int run=int.parse(stdin.readLineSync()!);
+   switch(run){
+     case 2 :
+       print("Thank you for using the program. Goodbye!");
+       return;
+     case 1 :
+          myApp();
+          break;
+     default:
+       print("Error in selecting the number try again.");
+       
+   }
+}catch(e){
+      print(e);
 }
-
+    
+    
+}
+ 
+}
 void myApp() {
   print('Welcome to calculator');
   int numberofoperations = 0; //***عشان احسب عدد العمليات اللي تمت***
